@@ -16,7 +16,7 @@ body{
 }
 header{
     text-align: center;
-    color:linear-gradient(135deg,yellow, rgb(220, 200, 200));
+    color:linear-gradient(135deg,black, rgb(220, 200, 200));
     font-family: Lobster,sans-serif,serif,"Times New Roman", Times;
 }
 header h1{
