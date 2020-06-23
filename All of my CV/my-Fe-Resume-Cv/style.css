@@ -3,10 +3,16 @@ body{
     font-size: 20px;
     font-weight: 50;
     line-height: 30px;
-    background:url(http://thanh280196.github.io/images/urlBG.jpg);
+    /*background-image:linear-gradient(90deg,rgb(143, 13, 13),rgb(145, 145, 77)),url(http://thanh280196.github.io/images/urlBG.jpg);*/
+    background-image: linear-gradient(
+      115deg,
+      rgba(136, 136, 206, 0.1),
+      black
+    ),
+    url(http://thanh280196.github.io/images/url-BG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color:rgb(230, 230, 20);
+    color:rgba(230, 230, 20,.8);
 }
 header{
     text-align: center;
@@ -18,11 +24,11 @@ header h1{
     font-weight: 1000;
     font-family: Lobster,sans-serif,serif,"Times New Roman", Times;
 }
-span{ 
+#txt{ 
     font-family: Lobster,sans-serif,serif,"Times New Roman", Times;
     font-size: 30px;
     position: fixed;
-    top: 10px;
+    top: 5px;
 }
 main{
     display: grid;
@@ -42,7 +48,7 @@ section{
     margin: 0px auto;
 }
 a{
-    color:rgb(230, 230, 20)
+    color:rgba(230, 230, 20,.8)
 }
 h2{
     font-style: italic;
@@ -51,7 +57,7 @@ h2{
     padding: 5px 5px;
     width: auto;
     max-width: 30vmax;
-    box-shadow: 15px 15px 20px 5px hsla(60, 50%, 50%);
+    box-shadow: 15px 15px 20px 5px hsla(60, 50%, 30%);
 }
 h2:hover{
     color:#fff;
@@ -68,18 +74,7 @@ h2:hover{
         transform: rotate(360deg);
     }
 }
-figure{
-    width: 15vw;
-    height: 20vmax;
-    padding: 0px;
-}
-.ava-img{
-    border-radius: 50%;
-}
-.ava-img:hover{
-    border-radius: 0%;
-    cursor: pointer;
-}
+
 @media (max-width:800px){
     img{
         border-radius: 0%;
@@ -93,15 +88,21 @@ figure{
 }
 #Story{
     grid-area: Story;
-}#Hobby{
+}
+#Hobby{
     grid-area: Hobby;
-}#Skill{
-    grid-area: Skill;
-}#Expect{
-    grid-area: Expect;
+}
+#Skill{
+    grid-area:Skill;
+}
+#Expect{
+    grid-area:Expect;
 }
 #Avatar{
     grid-area: Avatar;
+    width: 15vw;
+    height: 20vmax;
+    padding: 0px;
 }
 #Contact{
     grid-area: Contact;
@@ -112,6 +113,14 @@ figure{
 #Hello{
     grid-area: Hello;
     justify-self: start;
+}
+#Skill-Box{
+    grid-area: SkillBox;
+    color:red;
+}
+#BG-Bar{
+    width: 50px;
+    height: auto;
 }
 .contact-icon{
     width: 20vw;
@@ -134,5 +143,12 @@ figure{
     }
 }
 .contact-icon a img:hover{
+    cursor: pointer;
+}
+.ava-img{
+    border-radius: 50%;
+}
+.ava-img:hover{
+    border-radius: 0%;
     cursor: pointer;
 }
