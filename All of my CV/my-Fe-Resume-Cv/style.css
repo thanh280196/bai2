@@ -42,9 +42,9 @@ main{
     display: grid;
     grid-template-areas:". Hello ." 
                         "Avatar Story Contact"
-                         ". Hobby ."
                          ". Skill ."
-                         ". Expect .";
+                         ". Expect ."
+                         ". Hobby .";
     justify-items: center;
 }
 main p{
