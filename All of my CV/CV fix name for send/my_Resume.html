@@ -7,8 +7,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-Front-End-Resume-Cv</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="http://thanh280196.github.io/All of my CV/my-Fe-Resume-Cv/style.css">
+    <!--link rel="stylesheet" href="http://thanh280196.github.io/All of my CV/my-Fe-Resume-Cv/style.css"-->
     <!--<link rel="stylesheet" href="style.css">-->
+    <style>
+        
+body{
+    font-size: 20px;
+    font-weight: 50;
+    line-height: 30px;
+    /*background-image:linear-gradient(90deg,rgb(143, 13, 13),rgb(145, 145, 77)),url(http://thanh280196.github.io/images/urlBG.jpg);*/
+    /*background-image: linear-gradient(
+      115deg,
+      rgba(136, 136, 206, 0.1),
+      black
+    ),
+    url(http://thanh280196.github.io/images/url-BG.jpg);*/
+    background-image: 
+        linear-gradient(180deg,rgba(255,0,0,.4),rgba(0,0,255,.2)),
+        url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg
+        );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:rgba(230, 230, 20,1);
+}
+header{
+    text-align: center;
+    color:linear-gradient(0deg,rgba(230, 230, 20,1) 10%, rgb(220, 200, 200) 10%);
+    animation-name: fill-mode-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-family: Lobster,sans-serif,serif,"Times New Roman", Times;
+}
+header h1{
+    font-size: 50px;
+    font-weight: 1000;
+    font-family: Lobster,sans-serif,serif,"Times New Roman", Times;
+}
+#txt{ 
+    font-family: Lobster,sans-serif,serif,"Times New Roman", Times;
+    font-size: 30px;
+    position: fixed;
+    top: 5px;
+}
+main{
+    display: grid;
+    grid-template-areas:". Hello ." 
+                        "Avatar Story Contact"
+                         ". Skill ."
+                         ". Expect ."
+                         ". Hobby .";
+    justify-items: center;
+}
+main p{
+    padding-left: 25%;
+}
+section{
+    max-width: 80vmax;
+    width: 500px;
+    margin: 0px auto;
+}
+a{
+    color:rgba(230, 230, 20,.8)
+}
+h2{
+    font-style: italic;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: auto;
+    max-width: 30vmax;
+    box-shadow: 15px 15px 20px 5px hsla(60, 50%, 50%);
+}
+h2:hover{
+    color:#fff;
+    animation-name: roll-h2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    /*animation-fill-mode: forwards;*/
+    cursor: pointer;
+}
+@keyframes roll-h2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width:800px){
+    img{
+        border-radius: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .contact-icon a img{
+        width: 50px;
+        margin: 0px 10px;
+    }
+}
+#Story{
+    grid-area: Story;
+}
+#Hobby{
+    grid-area: Hobby;
+}
+#Skill{
+    grid-area:Skill;
+}
+#Expect{
+    grid-area:Expect;
+}
+#Avatar{
+    grid-area: Avatar;
+    width: 15vw;
+    height: 20vmax;
+    padding: 0px;
+}
+#Contact{
+    grid-area: Contact;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+}
+#Hello{
+    grid-area: Hello;
+    justify-self: start;
+}
+#Skill-Box{
+    grid-area: SkillBox;
+    color:red;
+}
+#BG-Bar{
+    width: 50px;
+    height: auto;
+}
+.contact-icon{
+    width: 20vw;
+    position: fixed;
+    bottom: 30px;
+    left: 0px;
+    display: flex;
+    align-items: flex-end;
+}
+.contact-icon a img{
+    border-radius: 50%;
+    margin: 0px 50px;
+    animation-name:icon-bigger;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes icon-bigger{
+    50%{
+        transform:scale(2);
+    }
+}
+.contact-icon a img:hover{
+    cursor: pointer;
+}
+.ava-img{
+    border-radius: 50%;
+}
+.ava-img:hover{
+    border-radius: 0%;
+    cursor: pointer;
+}
+
+    </style>
     <!-- js-->
     <script>
         // add time
@@ -33,8 +199,8 @@
 <body onload="startTime()">
     <header>
         <h1>Nguyen Hoang Thanh</h1>
-        <p>Apply Fresher Front-end Developer</p>
-        <p>Ha Noi,June- 2020</p>
+        <p>Apply Fresher Front-end Web Developer</p>
+        <p>Ha Noi,July- 2020</p>
     </header>
     <span id="txt"></span>
 
@@ -46,13 +212,15 @@
         <section id="Story">
             <h2>About Me</h2>
             <ul>
-                <li><strong>2014</strong> - study in HaNoi Law University (HLU) .
-                <li><strong>2015 - 2019 </strong> - attend HaNoi of University Business and Technology (HUBT) .</li>
-                <li><strong>2019 - 2020</strong> - finish University and work freelance in Game Industry,as a Unity
+                <li><strong>2014 </strong>- study in HaNoi Law University (HLU) .
+                <li><strong>2015 </strong> - attend HaNoi of University Business and Technology (HUBT).</li>
+                <li><strong>January,2018 - April,2018</strong></li> - IT supporter in Topica.
+                <li><strong>August,2018 - February,2019</strong></li> - freshman in Vietnam Post and Telecommunications Net Corporation(VNPT-Net).
+                <li><strong>2019 - 2020</strong> - finish University and work freelance in Game Industry for NextSol,Iris Media Company,as a Fullstack Unity
                     Game
                     Developer .</li>
-                <li><strong>present</strong> - learn Front-end Web at home .</li>
-            </ul>
+                <li><strong>present</strong><br> - learn Front-end Web at home .</li>
+                </ul>
             <hr>
         </section>
 
@@ -76,7 +244,7 @@
                     Responsive
                     Web Design , CSS Flexbox , CSS Grid ) .</li>
                 <li>
-                    I know about the base of Github.
+                    I know how to use the source-control-tool,like about Github.
                 </li>
                 <li>I can work well within group ( teamwork ) , or work alone well .</li>
                 <li>I can learn by my self and I think I learn by my self very well.</li>
@@ -90,7 +258,7 @@
             <h2>What I expect in the future and why I apply to this job ?</h2>
             <ul>
                 <li>I want to improve my self .</li>
-                <li>I want to have a good enviroment to developed .</li>
+                <li>I want to have a good environment to developed .</li>
                 <li>I think I can learn more about technology because I expect I would become a Fullstack Developer .
                 </li>
             </ul>
@@ -103,7 +271,7 @@
             <h2>Contact Me</h2>
             <a href="http://facebook.com/HoangThanh3296" target="_blank">My Facebook</a> <br>
             <a href="mailto:thanh.280196@gmail.com"> my Email</a> <br>
-            <a href="tel:0374440688">my Telephone</a>
+            <a href="tel:0374440688">my Telephone : 0374.440.688</a>
         </nav>
     </main>
 
